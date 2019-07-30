@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		440DEE4822F0BF9E00846D51 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 440DEE4722F0BF9E00846D51 /* CloudKit.framework */; };
 		446F6F8F22D02F21001C5280 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446F6F8E22D02F21001C5280 /* AppDelegate.swift */; };
 		446F6F9122D02F21001C5280 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446F6F9022D02F21001C5280 /* ViewController.swift */; };
 		446F6F9422D02F21001C5280 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 446F6F9222D02F21001C5280 /* Main.storyboard */; };
@@ -21,7 +20,6 @@
 
 /* Begin PBXFileReference section */
 		440DEE4622F0BF4A00846D51 /* Snapchat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Snapchat.entitlements; sourceTree = "<group>"; };
-		440DEE4722F0BF9E00846D51 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		446F6F8B22D02F21001C5280 /* Snapchat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snapchat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		446F6F8E22D02F21001C5280 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		446F6F9022D02F21001C5280 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,7 +41,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C0AD985C807CA83CD2BDE7B /* Pods_Snapchat.framework in Frameworks */,
-				440DEE4822F0BF9E00846D51 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,7 +94,6 @@
 		A7358B05931932C903EDBF28 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				440DEE4722F0BF9E00846D51 /* CloudKit.framework */,
 				D9B54F202BCDFFE045414359 /* Pods_Snapchat.framework */,
 			);
 			name = Frameworks;
@@ -139,13 +135,13 @@
 						CreatedOnToolsVersion = 10.2.1;
 						SystemCapabilities = {
 							com.apple.Keychain = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.Push = {
 								enabled = 1;
 							};
 							com.apple.iCloud = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};

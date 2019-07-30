@@ -40,8 +40,15 @@ class CadastroViewController: UIViewController {
                         let autenticacao = Auth.auth()
                         autenticacao.createUser(withEmail: emailR, password: senhaR) { (usuario, erro) in
                             
-                            if erro == nil{
-                                print("Sucesso ao cadastrar o usuario")
+                            if erro == nil{ // testar os erros no cadastro
+                                
+                                if usuario == nil{ //usuario nao identificado
+                                    self.exibirMensagem(titulo: "Erro ao autenticar! " , mensagem:"Problema ao realizar a autenticação, tente novamente.")
+                                }else{
+                                    // tela principal do app
+                                    self.performSegue(withIdentifier: "cadastroLoginSegue", sender: nil)
+                                }
+                            
                             }else{
                             
                                 //validar erro do cadastro do firebase - INICO
