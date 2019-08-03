@@ -16,16 +16,6 @@ class CadastroViewController: UIViewController {
     @IBOutlet weak var senha: UITextField!
     @IBOutlet weak var senhaConfirmacao: UITextField!
     
-    func exibirMensagem(titulo : String, mensagem : String){
-
-        let alerta = UIAlertController(title: titulo, message: mensagem, preferredStyle: .alert)
-        let acaoCancelar = UIAlertAction(title: "cancelar", style: .cancel, handler: nil)
-
-        alerta.addAction(acaoCancelar)
-        present(alerta, animated: true, completion: nil)
-
-    }
-    
     @IBAction func criarConta(_ sender: Any) {
         
         //recuperar dados digitados
@@ -43,7 +33,8 @@ class CadastroViewController: UIViewController {
                             if erro == nil{ // testar os erros no cadastro
                                 
                                 if usuario == nil{ //usuario nao identificado
-                                    self.exibirMensagem(titulo: "Erro ao autenticar! " , mensagem:"Problema ao realizar a autenticação, tente novamente.")
+                                    let alerta = Alerta(titulo: "Erro ao autenticar! " , mensagem: "Problema ao realizar a autenticação, tente novamente.")
+                                    self.present(alerta.getAlerta(),animated: true, completion: nil)
                                 }else{
                                     // tela principal do app
                                     self.performSegue(withIdentifier: "cadastroLoginSegue", sender: nil)
@@ -53,15 +44,19 @@ class CadastroViewController: UIViewController {
                             
                                 //validar erro do cadastro do firebase - INICO
                                 if let error = erro, (error as NSError).code == 17008 {
-                                    self.exibirMensagem(titulo: "Email mal formulado!" , mensagem:"Digite um email válido.")
+                                    let alerta = Alerta(titulo: "Email mal formulado!", mensagem: "Digite um email válido.")
+                                    self.present(alerta.getAlerta(),animated: true, completion: nil)
                                 }else
                                     if let error = erro, (error as NSError).code == 17026 {
-                                        self.exibirMensagem(titulo: "Senha fraca! " , mensagem:"Digite uma senha válida.")
+                                        let alerta = Alerta(titulo: "Senha fraca! ", mensagem:"Digite uma senha válida.")
+                                        self.present(alerta.getAlerta(),animated: true, completion: nil)
                                 }else
                                     if let error = erro, (error as NSError).code == 17007 {
-                                        self.exibirMensagem(titulo: "Email em uso! " , mensagem:"Digite um email diferente.")
+                                        let alerta = Alerta(titulo: "Email em uso! ", mensagem: "Digite um email diferente.")
+                                        self.present(alerta.getAlerta(),animated: true, completion: nil)
                                 }else{
-                                    self.exibirMensagem(titulo: "Dados incorreto! " , mensagem:"Confira os dados Novamente.")
+                                        let alerta = Alerta(titulo: "Dados incorreto! ", mensagem: "Confira os dados Novamente.")
+                                        self.present(alerta.getAlerta(),animated: true, completion: nil)
                                 }
     
                             }
@@ -70,7 +65,8 @@ class CadastroViewController: UIViewController {
                         //criar conta no firebase - FIM
 
                     }else{
-                        self.exibirMensagem(titulo: "Dados Incorretos!" , mensagem:"As senhas não estão iguais , digite novamente.")
+                        let alerta = Alerta(titulo: "Dados Incorretos!", mensagem:"As senhas não estão iguais , digite novamente.")
+                        self.present(alerta.getAlerta(),animated: true, completion: nil)
                     }//validar senha - FIM
                     
                 }

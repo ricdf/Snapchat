@@ -14,16 +14,6 @@ class EntrarViewController: UIViewController {
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var senha: UITextField!
    
-    func exibirMensagem(titulo : String, mensagem : String){
-        
-        let alerta = UIAlertController(title: titulo, message: mensagem, preferredStyle: .alert)
-        let acaoCancelar = UIAlertAction(title: "cancelar", style: .cancel, handler: nil)
-        
-        alerta.addAction(acaoCancelar)
-        present(alerta, animated: true, completion: nil)
-        
-    }
-    
     
     @IBAction func loginConta(_ sender: Any) {
         
@@ -39,7 +29,8 @@ class EntrarViewController: UIViewController {
                     
                     if usuario == nil{ // nao existe o usuario cadastrado
                         
-                        self.exibirMensagem(titulo: "Erro ao autenticar! " , mensagem:"Problema ao realizar a autenticação, tente novamente.")
+                        let alerta = Alerta(titulo: "Erro ao autenticar!", mensagem: "Problema ao realizar a autenticação, tente novamente.")
+                        self.present(alerta.getAlerta(),animated: true, completion: nil)
 
                     }else{
                         // tela principal do app
@@ -48,7 +39,8 @@ class EntrarViewController: UIViewController {
                     
                 }else{
                     
-                    self.exibirMensagem(titulo: "Dados incorreto! " , mensagem:"Confira os dados e tente novamente.")
+                    let alerta = Alerta(titulo: "Dados incorreto! ", mensagem: "Confira os dados e tente novamente.")
+                    self.present(alerta.getAlerta(),animated: true, completion: nil)
                 }
             }//login conta no firebase - FIM
             
