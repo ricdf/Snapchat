@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		445E5AAB22F4DC0900D10C5C /* SnapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445E5AAA22F4DC0900D10C5C /* SnapsViewController.swift */; };
 		445E5AAD22F4DC5500D10C5C /* FotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445E5AAC22F4DC5500D10C5C /* FotoViewController.swift */; };
+		44672B3122FE46B500FCEA67 /* UsuariosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44672B3022FE46B500FCEA67 /* UsuariosTableViewController.swift */; };
+		44672B3322FE4A0200FCEA67 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44672B3222FE4A0200FCEA67 /* Usuario.swift */; };
+		44672B3722FF0FA400FCEA67 /* Snap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44672B3622FF0FA400FCEA67 /* Snap.swift */; };
 		446F6F8F22D02F21001C5280 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446F6F8E22D02F21001C5280 /* AppDelegate.swift */; };
 		446F6F9122D02F21001C5280 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446F6F9022D02F21001C5280 /* ViewController.swift */; };
 		446F6F9422D02F21001C5280 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 446F6F9222D02F21001C5280 /* Main.storyboard */; };
@@ -25,6 +28,9 @@
 		440DEE4622F0BF4A00846D51 /* Snapchat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Snapchat.entitlements; sourceTree = "<group>"; };
 		445E5AAA22F4DC0900D10C5C /* SnapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapsViewController.swift; sourceTree = "<group>"; };
 		445E5AAC22F4DC5500D10C5C /* FotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotoViewController.swift; sourceTree = "<group>"; };
+		44672B3022FE46B500FCEA67 /* UsuariosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuariosTableViewController.swift; sourceTree = "<group>"; };
+		44672B3222FE4A0200FCEA67 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		44672B3622FF0FA400FCEA67 /* Snap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snap.swift; sourceTree = "<group>"; };
 		446F6F8B22D02F21001C5280 /* Snapchat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snapchat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		446F6F8E22D02F21001C5280 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		446F6F9022D02F21001C5280 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +67,7 @@
 				445E5AAA22F4DC0900D10C5C /* SnapsViewController.swift */,
 				445E5AAC22F4DC5500D10C5C /* FotoViewController.swift */,
 				446F6F9022D02F21001C5280 /* ViewController.swift */,
+				44672B3022FE46B500FCEA67 /* UsuariosTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -103,6 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				44D8AA1022F5921F00A3E0B7 /* Alerta.swift */,
+				44672B3222FE4A0200FCEA67 /* Usuario.swift */,
+				44672B3622FF0FA400FCEA67 /* Snap.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -256,7 +265,10 @@
 				446F6F8F22D02F21001C5280 /* AppDelegate.swift in Sources */,
 				44B6F22822D049E700959C46 /* EntrarViewController.swift in Sources */,
 				445E5AAD22F4DC5500D10C5C /* FotoViewController.swift in Sources */,
+				44672B3322FE4A0200FCEA67 /* Usuario.swift in Sources */,
 				44B6F22A22D04A0000959C46 /* CadastroViewController.swift in Sources */,
+				44672B3122FE46B500FCEA67 /* UsuariosTableViewController.swift in Sources */,
+				44672B3722FF0FA400FCEA67 /* Snap.swift in Sources */,
 				44D8AA1122F5921F00A3E0B7 /* Alerta.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

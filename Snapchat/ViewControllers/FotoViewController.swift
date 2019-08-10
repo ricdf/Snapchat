@@ -42,7 +42,8 @@ class FotoViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                         imagemRef.downloadURL(completion: { (url, erro) in
                             
                             if erro == nil{
-                                print(url?.absoluteString as Any)
+                                let strURL = url?.absoluteString
+                                self.performSegue(withIdentifier: "selecionarUsuarioSegue", sender: strURL)
                             }else{
                                 print("Erro no caminho da imagem no firebase.")
                             }
@@ -57,6 +58,19 @@ class FotoViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             }
         }
                 
+    }//finaliza proximo passo
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "selecionarUsuarioSegue"{
+            
+            let usuarioViewController = segue.destination as! UsuariosTableViewController
+            
+            usuarioViewController.descricao = self.descricao.text!
+            usuarioViewController.urlImagem = sender as! String
+            usuarioViewController.idImagem = self.idImagem
+            
+        }
     }
           
     
