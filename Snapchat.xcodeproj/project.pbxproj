@@ -17,6 +17,7 @@
 		446F6F9422D02F21001C5280 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 446F6F9222D02F21001C5280 /* Main.storyboard */; };
 		446F6F9922D02F24001C5280 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 446F6F9722D02F24001C5280 /* LaunchScreen.storyboard */; };
 		446FDDBB22D7B4A300072AD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 446FDDBA22D7B4A300072AD4 /* Assets.xcassets */; };
+		4491940C22FF1E040009070E /* DetalhesSnapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4491940B22FF1E040009070E /* DetalhesSnapViewController.swift */; };
 		44B6F22622D03F7400959C46 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 44B6F22522D03F7400959C46 /* GoogleService-Info.plist */; };
 		44B6F22822D049E700959C46 /* EntrarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B6F22722D049E700959C46 /* EntrarViewController.swift */; };
 		44B6F22A22D04A0000959C46 /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B6F22922D04A0000959C46 /* CadastroViewController.swift */; };
@@ -38,6 +39,7 @@
 		446F6F9822D02F24001C5280 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		446F6F9A22D02F24001C5280 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		446FDDBA22D7B4A300072AD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4491940B22FF1E040009070E /* DetalhesSnapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesSnapViewController.swift; sourceTree = "<group>"; };
 		44B6F22522D03F7400959C46 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		44B6F22722D049E700959C46 /* EntrarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntrarViewController.swift; sourceTree = "<group>"; };
 		44B6F22922D04A0000959C46 /* CadastroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				445E5AAC22F4DC5500D10C5C /* FotoViewController.swift */,
 				446F6F9022D02F21001C5280 /* ViewController.swift */,
 				44672B3022FE46B500FCEA67 /* UsuariosTableViewController.swift */,
+				4491940B22FF1E040009070E /* DetalhesSnapViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4491940C22FF1E040009070E /* DetalhesSnapViewController.swift in Sources */,
 				445E5AAB22F4DC0900D10C5C /* SnapsViewController.swift in Sources */,
 				446F6F9122D02F21001C5280 /* ViewController.swift in Sources */,
 				446F6F8F22D02F21001C5280 /* AppDelegate.swift in Sources */,

@@ -250,11 +250,64 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableview" destination="48m-9l-J5T" id="bpy-rC-iLh"/>
+                        <segue destination="Omy-JC-1IZ" kind="presentation" identifier="detalhesSnapSegue" id="Wye-lZ-6S6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Agk-AF-jLx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4207.2463768115949" y="221.65178571428569"/>
+        </scene>
+        <!--Detalhes Snap View Controller-->
+        <scene sceneID="5cF-lq-YPy">
+            <objects>
+                <viewController id="Omy-JC-1IZ" customClass="DetalhesSnapViewController" customModule="Snapchat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tIW-bV-imT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NsE-l2-ZWc">
+                                <rect key="frame" x="0.0" y="52" width="414" height="260"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="260" id="29l-zC-Wri"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="54X-0y-eoi">
+                                <rect key="frame" x="0.0" y="320" width="414" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Pk-E1-NUI">
+                                <rect key="frame" x="0.0" y="842" width="414" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="120"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jf7-WJ-7fv" firstAttribute="bottom" secondItem="1Pk-E1-NUI" secondAttribute="bottom" constant="20" id="DlJ-tO-PVZ"/>
+                            <constraint firstItem="1Pk-E1-NUI" firstAttribute="leading" secondItem="jf7-WJ-7fv" secondAttribute="leading" id="IEX-WV-FWr"/>
+                            <constraint firstItem="jf7-WJ-7fv" firstAttribute="trailing" secondItem="NsE-l2-ZWc" secondAttribute="trailing" id="IjA-Ct-u7L"/>
+                            <constraint firstItem="jf7-WJ-7fv" firstAttribute="trailing" secondItem="1Pk-E1-NUI" secondAttribute="trailing" id="UpL-dn-6r6"/>
+                            <constraint firstItem="54X-0y-eoi" firstAttribute="leading" secondItem="jf7-WJ-7fv" secondAttribute="leading" id="Yvf-Jl-u0E"/>
+                            <constraint firstItem="jf7-WJ-7fv" firstAttribute="trailing" secondItem="54X-0y-eoi" secondAttribute="trailing" id="cN5-DH-HEk"/>
+                            <constraint firstItem="54X-0y-eoi" firstAttribute="top" secondItem="NsE-l2-ZWc" secondAttribute="bottom" constant="8" id="dMy-je-dZn"/>
+                            <constraint firstItem="NsE-l2-ZWc" firstAttribute="top" secondItem="jf7-WJ-7fv" secondAttribute="top" constant="8" id="mRw-Cj-mND"/>
+                            <constraint firstItem="54X-0y-eoi" firstAttribute="top" secondItem="NsE-l2-ZWc" secondAttribute="bottom" constant="8" id="vz1-kO-HxW"/>
+                            <constraint firstItem="NsE-l2-ZWc" firstAttribute="leading" secondItem="jf7-WJ-7fv" secondAttribute="leading" id="y6V-ZO-zYS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jf7-WJ-7fv"/>
+                    </view>
+                    <connections>
+                        <outlet property="contador" destination="1Pk-E1-NUI" id="zQu-0M-2bJ"/>
+                        <outlet property="detalhes" destination="54X-0y-eoi" id="dgF-h9-0sC"/>
+                        <outlet property="imagem" destination="NsE-l2-ZWc" id="qE6-ck-4ZL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6m0-Nd-ePN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4207" y="1110"/>
         </scene>
         <!--Foto-->
         <scene sceneID="U1h-AW-Feg">

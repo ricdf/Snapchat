@@ -55,6 +55,20 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 self.tableview.reloadData()
             })
             
+            //adicionar ouvinte para o item removido
+            snaps.observe(DataEventType.childRemoved, with: { (snapshots) in
+                
+                var indice = 0
+                for snap in self.snaps{
+                    if snap.identificador == snapshots.key{
+                        self.snaps.remove(at: indice)
+                    }
+                    indice = indice + 1
+                }
+                //recarregar a tabela apos excluir o snap do array
+                self.tableview.reloadData()
+            })
+            
         }
     }
 
@@ -82,4 +96,22 @@ class SnapsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return celula
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        //so passar para viewcontroller de detalhes se tiver snaps
+        let totalSnaps = snaps.count
+        if (totalSnaps > 0) {
+            let snap = self.snaps [indexPath.row]
+            self.performSegue(withIdentifier: "detalhesSnapSegue", sender: snap)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if ( segue.identifier == "detalhesSnapSegue" ){
+            
+            let detalhesSnapviewController = segue.destination as! DetalhesSnapViewController
+            detalhesSnapviewController.snap = sender as! Snap
+        }
+    }
 }
