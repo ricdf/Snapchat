@@ -103,8 +103,8 @@
 				446F6F9222D02F21001C5280 /* Main.storyboard */,
 				446F6F9722D02F24001C5280 /* LaunchScreen.storyboard */,
 				446F6F9A22D02F24001C5280 /* Info.plist */,
-				44B6F22522D03F7400959C46 /* GoogleService-Info.plist */,
 				446FDDBA22D7B4A300072AD4 /* Assets.xcassets */,
+				44B6F22522D03F7400959C46 /* GoogleService-Info.plist */,
 			);
 			path = Snapchat;
 			sourceTree = "<group>";
